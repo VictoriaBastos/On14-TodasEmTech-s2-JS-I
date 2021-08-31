@@ -9,11 +9,11 @@
 <body>
 
 <script>
-// criar produtos.
-// criar função promoção com produtos como parâmetros.
-// somar o valor total dos produtos.
-// verificar se produtos são iguais.
-// cada comparação igual tira -5 do valor total.
+// criar produtos 
+// criar função promoção
+// somar o valor total dos prods
+// verificar se prods são iguais
+// cada comparação igual tira -5 do valor total
 
 
 var produto1 = 10
@@ -29,26 +29,30 @@ function promo(prodA,prodB,prodC,prodD){
     if(prodA == prodB || prodA == prodC || prodA == prodD){
         valorTotal -= 5
         console.log(valorTotal)
-    }else if(prodB == prodC || prodB == prodD){
+    }
+    
+    if(prodB == prodC || prodB == prodD){
         valorTotal -= 5
         console.log(valorTotal)
-    }else if(prodC == prodD){
+    }
+    
+    if(prodC == prodD){
         valorTotal -= 5
         console.log(valorTotal)
     }
     console.log(valorTotal)
 }
 
-// promo(produto1,produto2,produto1,produto4) ok
-// promo(produto2,produto2,produto3,produto4) ok
-// promo(produto1,produto2,produto3,produto3) ok
-// promo(produto4,produto2,produto3,produto4) ok
-// promo(produto3,produto4,produto3,produto4) nao
-// promo(produto1,produto2,produto2,produto1) nao
-//promo(produto1,produto1,produto1,produto1) nao
-
-// ERRO: Uma vez que uma condição if/if else é abastecida as condições seguintes não são verificadas.
-// Sugestão: Criar lista e introduzir loop (iteração ainda não foi estudada em aula)
+// promo(produto1,produto2,produto1,produto4)
+// promo(produto2,produto2,produto3,produto4)
+// promo(produto1,produto2,produto3,produto3)
+// promo(produto4,produto2,produto3,produto4)
+// promo(produto3,produto4,produto3,produto4)
+// promo(produto1,produto2,produto2,produto1)
+// promo(produto1,produto1,produto1,produto3)
+// promo(produto1,produto1,produto1,produto1)
+// ERRO: Se 3 ou mais produtos forem iguais o calculo do valor total é incorreto. Cada condição é verificadas apenas uma vez.
+// Sugestão: Criar lista de produtos e introduzir loop (material não estudado em aula).
 </script>    
 </body>
 </html>
