@@ -23,34 +23,33 @@ var produto4 = 40
 var valorTotal = 0
 
 function promo(prodA,prodB,prodC,prodD){
+    
     valorTotal = (prodA + prodB + prodC + prodD)
-        console.log(prodA,prodB,prodC,prodD)
-        console.log(valorTotal)
+    
     if(prodA == prodB || prodA == prodC || prodA == prodD){
         valorTotal -= 5
-        console.log(valorTotal)
+        if(prodA == prodB || prodA == prodC || prodA == prodD){
+            valorTotal = valorTotal
+        }
+        
     }
     
     if(prodB == prodC || prodB == prodD){
         valorTotal -= 5
-        console.log(valorTotal)
+        if(prodB == prodC || prodB == prodD){
+            valorTotal = valorTotal
+        }
     }
     
     if(prodC == prodD){
         valorTotal -= 5
-        console.log(valorTotal)
     }
     console.log(valorTotal)
 }
 
-// promo(produto1,produto2,produto1,produto4)
-// promo(produto2,produto2,produto3,produto4)
-// promo(produto1,produto2,produto3,produto3)
-// promo(produto4,produto2,produto3,produto4)
-// promo(produto3,produto4,produto3,produto4)
-// promo(produto1,produto2,produto2,produto1)
-// promo(produto1,produto1,produto1,produto3)
-// promo(produto1,produto1,produto1,produto1)
+
+promo(produto1,produto2,produto1,produto4) 
+
 // ERRO: Se 3 ou mais produtos forem iguais o calculo do valor total é incorreto. Cada condição é verificadas apenas uma vez.
 // Sugestão: Criar lista de produtos e introduzir loop (material não estudado em aula).
 </script>    
