@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia JS</title>
+</head>
+<body>
+
+<script>
+// criar produtos.
+// criar função promoção com produtos como parâmetros.
+// somar o valor total dos produtos.
+// verificar se produtos são iguais.
+// cada comparação igual tira -5 do valor total.
+
+
+var produto1 = 10
+var produto2 = 20
+var produto3 = 30
+var produto4 = 40
+var valorTotal = 0
+
+function promo(prodA,prodB,prodC,prodD){
+    valorTotal = (prodA + prodB + prodC + prodD)
+        console.log(prodA,prodB,prodC,prodD)
+        console.log(valorTotal)
+    if(prodA == prodB || prodA == prodC || prodA == prodD){
+        valorTotal -= 5
+        console.log(valorTotal)
+    }else if(prodB == prodC || prodB == prodD){
+        valorTotal -= 5
+        console.log(valorTotal)
+    }else if(prodC == prodD){
+        valorTotal -= 5
+        console.log(valorTotal)
+    }
+    console.log(valorTotal)
+}
+
+// promo(produto1,produto2,produto1,produto4) ok
+// promo(produto2,produto2,produto3,produto4) ok
+// promo(produto1,produto2,produto3,produto3) ok
+// promo(produto4,produto2,produto3,produto4) ok
+// promo(produto3,produto4,produto3,produto4) nao
+// promo(produto1,produto2,produto2,produto1) nao
+//promo(produto1,produto1,produto1,produto1) nao
+
+// ERRO: Uma vez que uma condição if/if else é abastecida as condições seguintes não são verificadas.
+// Sugestão: Criar lista e introduzir loop (iteração ainda não foi estudada em aula)
+</script>    
+</body>
+</html>
